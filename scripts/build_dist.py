@@ -65,11 +65,9 @@ def main():
 
     shutil.make_archive(os.path.join(DIST, "plastiform-engineer"), "zip", OUT)
 
-    # Competitor standalone — sales/support front door on claude.ai; single self-contained file.
-    comp = os.path.join(DIST, "plastiform-competitor-standalone")
-    os.makedirs(comp)
-    shutil.copy(os.path.join(PLUGIN, "skills/plastiform-competitor/SKILL.md"), comp)
-    shutil.make_archive(os.path.join(DIST, "plastiform-competitor"), "zip", comp)
+    # The competitor skill (internal pricing/mapping) is NOT in this public repo — its
+    # standalone zip is built by hand from ~/.claude/skills/plastiform-competitor/ and
+    # distributed privately, never committed here.
 
     # Self-check
     assert "find_product" in standalone and "finder.py" not in standalone
