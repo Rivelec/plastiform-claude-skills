@@ -1,0 +1,16 @@
+{
+  "manifest_version": "0.3",
+  "name": "plastiform-finder",
+  "display_name": "Plastiform Finder",
+  "version": "0.4.0",
+  "description": "find_product — selects the right Plastiform product via the live form.plastiform.info Finder API.",
+  "author": { "name": "Plastiform (Rivelec)" },
+  "server": {
+    "type": "node",
+    "entry_point": "server.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server.mjs"]
+    }
+  }
+}

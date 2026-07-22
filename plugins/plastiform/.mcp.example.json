@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "plastiform-brand-fs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${PLASTIFORM_BRAND_KNOWLEDGE_DIR}"
+      ]
+    }
+  }
+}

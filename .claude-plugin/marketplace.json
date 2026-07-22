@@ -1,0 +1,24 @@
+{
+  "name": "plastiform-skills",
+  "owner": {
+    "name": "Plastiform (Rivelec)",
+    "email": "tanguy.olympestudio@gmail.com"
+  },
+  "description": "Skills, agents and MCP servers for working on Plastiform (a trademark of Rivelec).",
+  "plugins": [
+    {
+      "name": "plastiform",
+      "source": "./plugins/plastiform",
+      "description": "Makes Claude a Plastiform application engineer — the range, accessories, product selection (Finder), application, recognition and troubleshooting — plus brand/copy skills.",
+      "version": "0.4.0",
+      "category": "internal-tools",
+      "tags": [
+        "plastiform",
+        "rivelec",
+        "metrology",
+        "engineer",
+        "finder"
+      ]
+    }
+  ]
+}

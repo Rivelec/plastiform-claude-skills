@@ -1,0 +1,16 @@
+{
+  "name": "plastiform",
+  "description": "Makes Claude a Plastiform application engineer: range, accessories, Finder, application, recognition, troubleshooting — plus brand/copy skills.",
+  "version": "0.4.0",
+  "author": {
+    "name": "Plastiform (Rivelec)"
+  },
+  "mcpServers": {
+    "plastiform-finder": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"
+      ]
+    }
+  }
+}
