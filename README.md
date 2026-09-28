@@ -46,6 +46,7 @@ then drag `plastiform-finder.mcpb` into Desktop → Settings → Extensions.
 | Skill | `plastiform-media`      | Read-only Piwigo client for media.plastiform.info — fuzzy FR/EN search, faceted tags, photo comparison sets. |
 | Skill | `plastiform-brand`      | Enforces sourcing every fact from the brand knowledge base; never invent product/offer details. |
 | Agent | `plastiform-copywriter` | Writes/reviews brand-accurate Plastiform copy, flags `[NEEDS SOURCE]` gaps. |
+| Skill | `gemini-writer`         | Puts already-decided content into words with Gemini 3.1 Pro (OpenRouter), the way a Rivelec employee writes: mail, blog article, product page, LinkedIn post. Decides neither content nor technique; checks form and flags figures not in the brief. Needs `node` ≥ 18 and an OpenRouter key (`OPENROUTER_API_KEY` or `~/.config/openrouter/key`). |
 | MCP   | `.mcp.example.json`     | Template for optional extra MCP servers (filesystem, scoped to brand knowledge). |
 
 ## MCP servers

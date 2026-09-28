@@ -1,7 +1,7 @@
 {
   "name": "plastiform",
-  "description": "Makes Claude a Plastiform application engineer: range, accessories, Finder, application, recognition, troubleshooting — plus brand/copy skills.",
-  "version": "0.4.0",
+  "description": "Makes Claude a Plastiform application engineer: range, accessories, Finder, application, recognition, troubleshooting — plus brand/copy skills and a writer that puts decided content into words (Gemini).",
+  "version": "0.5.0",
   "author": {
     "name": "Plastiform (Rivelec)"
   },

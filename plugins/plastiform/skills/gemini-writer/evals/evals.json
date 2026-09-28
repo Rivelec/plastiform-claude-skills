@@ -1,0 +1,73 @@
+{
+ "skill_name": "gemini-writer",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Réponds à Marc Durand, un client, qui m'écrit : « Bonjour, nos empreintes au P80 RA restent collantes après 10 minutes, qu'est-ce qu'on fait mal ? Merci, Marc ». Dis-lui : 1) que la cause la plus fréquente est un dégraissage oublié ou mal fait, au DN1 pulvérisé puis laissé s'évaporer sans essuyer ; 2) de vérifier que la goutte test sort d'une seule couleur ; 3) qu'en dessous de 20 °C la prise est plus longue ; 4) que si ça continue, il m'envoie une photo de l'empreinte et la température de l'atelier.",
+   "expected_output": "The requested content, every point and nothing more, written as a Rivelec employee would.",
+   "files": [],
+   "assertions": [
+    "Mail is 125 words or fewer",
+    "Mail is not signed (the mail client adds the signature)",
+    "Mail covers the four points (DN1, test drop, 20 °C, photo)",
+    "No long dash (—)",
+    "No emoji",
+    "No AI vocabulary (crucial, essentiel, optimiser, leverage…)",
+    "Every figure appears in the Plastiform sources or the request",
+    "No exclamation mark",
+    "No sentence over 30 words"
+   ]
+  },
+  {
+   "id": 2,
+   "prompt": "Écris l'article de blog « Contrôler un filetage intérieur par empreinte » pour plastiform.info, avec ces sections : 1. Pourquoi une empreinte : on ne mesure pas directement le filetage d'un taraudage, l'empreinte le reproduit sans découper la pièce, en mesure comparative à ±1 µm. 2. Choisir le produit : calculer la contrainte d'extraction C = (1 − Dmin/Dmax) × 100 et prendre un produit dont la contrainte maximale est supérieure ; pour un filetage intérieur, le F20 (30 %). 3. Prendre l'empreinte : dégraisser au DN1, goutte test, injecter depuis le fond, poser une bague de démoulage, attendre la prise (environ 6 minutes). 4. Extraire : tirer droit, ne jamais dévisser. 5. Mesurer : sans contact, au projecteur de profil ou au système de vision.",
+   "expected_output": "The requested content, every point and nothing more, written as a Rivelec employee would.",
+   "files": [],
+   "assertions": [
+    "Title is 4 to 10 words and 70 characters or fewer",
+    "Intro (chapô) is 50 words or fewer",
+    "Exactly the 5 sections asked for",
+    "No summary \"Conclusion\" section",
+    "No long dash (—)",
+    "No emoji",
+    "No AI vocabulary (crucial, essentiel, optimiser, leverage…)",
+    "Every figure appears in the Plastiform sources or the request",
+    "No exclamation mark",
+    "No sentence over 30 words"
+   ]
+  },
+  {
+   "id": 3,
+   "prompt": "Rédige la page produit du F50 pour le site, en français, avec ces parties : présentation (un fluide qui donne une empreinte semi-flexible de 50 Shore A, pour les formes internes simples) ; quand l'utiliser (contrainte d'extraction jusqu'à 10 %, découpe au cutter double lame, empreinte partielle avec du Plastin) ; mise en œuvre (dégraisser au DN1, injecter depuis le fond, extraire en tirant droit) ; puis les caractéristiques de la fiche produit.",
+   "expected_output": "The requested content, every point and nothing more, written as a Rivelec employee would.",
+   "files": [],
+   "assertions": [
+    "Covers the parts asked for (presentation, when to use, how to use, characteristics)",
+    "No superlative (meilleur, idéal, parfait, unique, exceptionnel…)",
+    "No long dash (—)",
+    "No emoji",
+    "No AI vocabulary (crucial, essentiel, optimiser, leverage…)",
+    "Every figure appears in the Plastiform sources or the request",
+    "No exclamation mark",
+    "No sentence over 30 words"
+   ]
+  },
+  {
+   "id": 4,
+   "prompt": "Post LinkedIn en anglais pour dire que la Plastiform Academy est en ligne : une formation en ligne gratuite sur la prise d'empreinte Plastiform, qu'on suit à son rythme, en 4 modules, avec un certificat quand on réussit l'évaluation finale. Lien d'inscription : https://academy.plastiform.info/client-register",
+   "expected_output": "The requested content, every point and nothing more, written as a Rivelec employee would.",
+   "files": [],
+   "assertions": [
+    "Post is 1,300 characters or fewer (no padding minimum)",
+    "Registration link present",
+    "No hashtag added (none asked for)",
+    "No long dash (—)",
+    "No emoji",
+    "No AI vocabulary (crucial, essentiel, optimiser, leverage…)",
+    "Every figure appears in the Plastiform sources or the request",
+    "No exclamation mark",
+    "No sentence over 30 words"
+   ]
+  }
+ ]
+}
