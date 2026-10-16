@@ -1,0 +1,17 @@
+{
+ "skill_name": "affinity-nouveau-projet",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Je veux créer un flyer A4 recto-verso en FR, EN et DE comme le catalogue, avec uniquement des images liées.",
+   "expected_output": "Questions groupées (format, profil, numéros), projet.py creer, creer_document.js (BASE + langues, Linked), placer_base après graine, contrôle bilan_sante.",
+   "files": []
+  },
+  {
+   "id": 2,
+   "prompt": "Prépare-moi un document de base Affinity pour une brochure de 12 pages avec fond perdu 3 mm.",
+   "expected_output": "creer_document.js avec mm, fond perdu LTRB, FOGRA39 ou SWOP selon choix, placement lié vérifié dans Configuration du document.",
+   "files": []
+  }
+ ]
+}

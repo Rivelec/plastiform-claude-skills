@@ -47,6 +47,16 @@ then drag `plastiform-finder.mcpb` into Desktop → Settings → Extensions.
 | Skill | `plastiform-brand`      | Enforces sourcing every fact from the brand knowledge base; never invent product/offer details. |
 | Agent | `plastiform-copywriter` | Writes/reviews brand-accurate Plastiform copy, flags `[NEEDS SOURCE]` gaps. |
 | Skill | `gemini-writer`         | Puts already-decided content into words with Gemini 3.1 Pro (OpenRouter), the way a Rivelec employee writes: mail, blog article, product page, LinkedIn post. Decides neither content nor technique; checks form and flags figures not in the brief. Needs `node` ≥ 18 and an OpenRouter key (`OPENROUTER_API_KEY` or `~/.config/openrouter/key`). |
+| Skill | `affinity-pilotage`     | Base of the Affinity publishing toolkit (French): drives Affinity by Canva from Claude — Affinity MCP, launcher, `_Outils_Affinity` tools, SDK notes, verified pitfalls. The skills below build on it. |
+| Skill | `affinity-nouveau-projet` | New multilingual Affinity project: shared BASE linked under every spread + one file per language, linked images only, `projet.json`, export scripts. |
+| Skill | `affinity-migration`    | Brings an existing Affinity file or project into that structure, with before/after renders. |
+| Skill | `affinity-sante-projet` | Read-only health check of a project's `.af` files (links, images, fonts, overflowing text, stale exports), report by severity. |
+| Skill | `affinity-textes-langues` | Text corrections that keep the formatting: JSON rules, simulation then application, per-language typography. |
+| Skill | `affinity-donnees-centralisees` | Prices and repeated values in one data file (JSON / Excel), pushed to every language. |
+| Skill | `publication-export-version` | Scripted PDF exports (every variant, or one PDF per data sheet), versions, CHANGELOG, PDF checks and diffs. |
+| Skill | `revue-pdf`             | Review of exported PDFs: automatic checks, diff with the previous version, visual and content review, severity report. |
+| Skill | `relecture-multilingue` | Translation review against the French reference: alignment, numbers, glossary, decision page (QCM), application. |
+| Agent | `relecteur-independant` | Independent reviewer of exported PDFs that has not seen the work (so the work doesn't grade itself). |
 | MCP   | `.mcp.example.json`     | Template for optional extra MCP servers (filesystem, scoped to brand knowledge). |
 
 ## MCP servers
@@ -65,6 +75,15 @@ export PLASTIFORM_BRAND_KNOWLEDGE_DIR=/path/to/.specify/memory/brand-knowledge
 
 Edit `.mcp.json` for the server(s) you actually want (Woo/Piwigo/etc.), then reinstall.
 `.mcp.json` is git-ignored so machine-specific paths don't get committed.
+
+## Affinity publishing toolkit
+
+The `affinity-*`, `publication-export-version`, `revue-pdf` and `relecture-multilingue` skills are written in
+French (Rivelec's catalogue and data-sheet workflows). They drive **Affinity by Canva** on the user's Mac through
+the Affinity MCP server (Affinity › Settings › MCP) and the Claude desktop app's link to the computer. Their tools
+live in `plugins/plastiform/skills/affinity-pilotage/outils/` — the reference copy of what is installed on the Mac in
+`~/Desktop/Cowork/_Outils_Affinity`: JavaScript run inside Affinity, standalone publishing scripts (also saved in
+Affinity's script library), Python checks. Install / update: `affinity-pilotage/references/environnement.md`.
 
 ## "Anthropic store"?
 

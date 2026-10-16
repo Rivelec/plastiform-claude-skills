@@ -1,0 +1,4 @@
+// Lanceur Claude — exécute les scripts préparés par Claude (_Outils_Affinity/run/current.txt) quand le MCP
+// d'Affinity est indisponible : Claude prépare, vous cliquez Exécuter, Claude lit le compte rendu.
+// Inutile sans demande de Claude. Contenu identique à _Outils_Affinity/lanceur.js.
+const fs = require('/fs.js'), O = '/Users/tanguy.rivelec/Desktop/Cowork/_Outils_Affinity/'; let cible = ''; try { const u = new Uint8Array(fs.File.readAll(O + 'run/current.txt').buffer); let s = ''; for (let i = 0; i < u.length; i += 32768) s += String.fromCharCode.apply(null, u.subarray(i, i + 32768)); for (cible of decodeURIComponent(escape(s)).split('\n').map(x => x.trim()).filter(Boolean)) require(cible); } catch (e) { try { const f = fs.File.create(O + 'run/out_run.txt', 'ab'); f.writeStringAsUtf8('ERREUR ' + cible + '\n' + e + '\n' + (e.stack || '') + '\nFIN\n'); f.close(); } catch (e2) { } console.log('ERREUR ' + e); }

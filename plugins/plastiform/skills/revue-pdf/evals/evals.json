@@ -1,0 +1,17 @@
+{
+ "skill_name": "revue-pdf",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Relis les PDF du catalogue avant que je les envoie à l'imprimeur.",
+   "expected_output": "verif_pdfs.py (fond perdu IMP 3 mm, polices, ppp), revue visuelle des pages, rapport CRITIQUE/MAJEUR/MINEUR avec preuves, proposition de revue indépendante.",
+   "files": []
+  },
+  {
+   "id": 2,
+   "prompt": "Compare la fiche F20 en V2.0 avec la nouvelle version.",
+   "expected_output": "diff_pdfs.py --visuel, changements par page, cohérence avec le CHANGELOG.",
+   "files": []
+  }
+ ]
+}

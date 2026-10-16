@@ -1,0 +1,65 @@
+{
+ "_aide": [
+  "projet.json — paramètres d'un projet Affinity multilingue (BASE liée + un fichier par langue). Modèle : catalogue.",
+  "Monter la version : python3 _Outils_Affinity/python/projet.py version <dossier> [X.Y] (une seule montée par cycle non publié).",
+  "Exporter : publication/export_publication.js (bibliothèque Affinity « Export publication »). Données : publication/appliquer_donnees.js.",
+  "Placeholders : {prefixe} {numero} {annee} {version} {langue} {variante} {support} {ref}."
+ ],
+ "projet": {
+  "nom": "{{NOM}}",
+  "type": "catalogue",
+  "prefixe": "{{PREFIXE}}",
+  "annee": "{{ANNEE}}",
+  "version": "{{VERSION}}",
+  "etat": "non publiée",
+  "auteur": "Rivelec - Plastiform",
+  "langue_reference": "FR"
+ },
+ "fichiers": {
+  "base": "BASE.af",
+  "langues": {{LANGUES_FICHIERS}},
+  "images": "Images/",
+  "exports": "EXPORTS/",
+  "scripts": "Scripts/"
+ },
+ "titres": {{TITRES}},
+ "reference": {
+  "modele": "{prefixe}_{numero}_{annee}_V{version}",
+  "motif": "{{PREFIXE}}_\\d+_\\d{4}_V\\d+(?:\\.\\d+)*",
+  "_aide": "La référence imprimée (texte qui correspond à « motif », au dos par ex.) est remplacée avant chaque export."
+ },
+ "elements": {
+  "PRIX": { "calque": "PRIX", "_aide": "calques de premier niveau nommés PRIX (tarifs, pastille AP)" },
+  "UNCETA": { "motif": "unceta", "_aide": "tout objet dont le nom contient « unceta » (hors BASE)" }
+ },
+ "variantes": {
+  "AP": { "libelle": "avec prix", "afficher": ["PRIX"], "masquer": ["UNCETA"] },
+  "SP": { "libelle": "sans prix", "afficher": [], "masquer": ["PRIX", "UNCETA"] }
+ },
+ "supports": {
+  "WEB": { "libelle": "écran, A4 sans fond perdu", "prereglages": ["PDF Catalogue web", "PDF (numérique - haute qualité)"] },
+  "IMP": { "libelle": "imprimeur, fond perdu 3 mm", "prereglages": ["PDF Catalogue impression", "PDF (Imprimerie)"] }
+ },
+ "exports": {{EXPORTS}},
+ "nom_fichier": "{support}_{langue}_{variante}_{ref}.pdf",
+ "donnees": {
+  "fichier": "tarifs.json",
+  "calque": "PRIX",
+  "garde": "€",
+  "tolerance": 8,
+  "_aide": "facultatif : données communes aux langues (prix…) ; supprimer cette section si inutile."
+ },
+ "verifications": {
+  "pages": null,
+  "ppp_min": 150,
+  "taille_max_mo": { "WEB": 40, "IMP": 120 },
+  "fond_perdu_mm": { "WEB": 0, "IMP": 3 },
+  "variantes": {
+   "AP": { "requis": ["€"] },
+   "SP": { "interdits": ["€"] }
+  },
+  "interdits": [],
+  "_aide": "règles de python/verif_pdfs.py (--projet projet.json)."
+ },
+ "changelog": { "mode": "document" }
+}

@@ -1,0 +1,23 @@
+{
+ "skill_name": "publication-export-version",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Exporte toutes les versions du catalogue et dis-moi ce qui a changé depuis la V1.0.",
+   "expected_output": "projet.py etat, export_publication.js, affinity_wait, verif_pdfs.py --projet, diff_pdfs.py contre les anciens PDF, brouillon de CHANGELOG.",
+   "files": []
+  },
+  {
+   "id": 2,
+   "prompt": "On passe le catalogue en 1.1, j'ai changé le prix du F20.",
+   "expected_output": "projet.py version (refus si non publiée → noter), appliquer_donnees simulation/application, noter au CHANGELOG, export, contrôles.",
+   "files": []
+  },
+  {
+   "id": 3,
+   "prompt": "Sors les PDF des fiches techniques en anglais uniquement.",
+   "expected_output": "export_par_element.js avec langues EN, contrôle verif_pdfs (titre_contient_ref false), page précédente XL.",
+   "files": []
+  }
+ ]
+}

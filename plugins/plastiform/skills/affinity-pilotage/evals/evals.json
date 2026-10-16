@@ -1,0 +1,23 @@
+{
+ "skill_name": "affinity-pilotage",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Dans le catalogue, liste-moi toutes les images incorporées et celles qui sont sous 250 ppp effectifs.",
+   "expected_output": "Utilise inventaire_liens.js via affinity_run.sh + lanceur MCP, puis lit le JSON ; aucune modification ; tableau par document.",
+   "files": []
+  },
+  {
+   "id": 2,
+   "prompt": "Remplace « Recommanded » par « Recommended » partout dans le fichier anglais des fiches, sans casser le gras.",
+   "expected_output": "Règles JSON, corrections_textes.js en simulation, rendus avant, application, rendus après, comparer_rendus.py, CHANGELOG.",
+   "files": []
+  },
+  {
+   "id": 3,
+   "prompt": "Affinity ne répond plus quand tu lances un script, qu'est-ce qui se passe ?",
+   "expected_output": "Lit le préambule MCP si demandé, affinity_wait.sh, capture d'écran pour une boîte de dialogue ; ne relance pas aveuglément.",
+   "files": []
+  }
+ ]
+}

@@ -111,6 +111,7 @@ plugins/plastiform/agents/
 | Skill | `plastiform-brand` | Sourcing discipline, never invent | ✅ |
 | Agent | `plastiform-copywriter` | Brand-accurate copy | ✅ |
 | Skill | `plastiform-media` | Read-only Piwigo client; feeds `recognition.md` with labelled photos | ✅ ported |
+| Skills + agent | `affinity-*`, `publication-export-version`, `revue-pdf`, `relecture-multilingue` · `relecteur-independant` | Affinity publishing toolkit for Rivelec documents (catalogue, data sheets): multilingual layouts, centralised data, scripted exports and versions, PDF and translation reviews | ✅ (tested on copies of the 2026 catalogue and data sheets) |
 | Skill | `plastiform-competitor` | "Microset 101 THS → equivalent" + verified corrections | ✅ (matrix validated 2026-07-15; kept **out of this public repo** — internal pricing) |
 
 ## Serving both Claude Code and Claude Desktop

@@ -1,0 +1,44 @@
+{{NOM_MAJ}} — {{PREFIXE}}
+==========================================
+
+CONTENU DU DOSSIER
+  {{BASE}}             Mise en page commune à toutes les langues : photos, pictos, fonds, maquettes.
+                       AUCUN texte de langue.
+  {{FICHIERS_LANGUES}}
+                       Textes de la langue (et éléments variables : calques PRIX…) ; la BASE est placée en lien
+                       sous chaque planche.
+  projet.json          Version, références, variantes, supports d'export, titres des PDF.
+  Images/              Toutes les images, LIÉES (jamais incorporées). Ne pas renommer un fichier.
+  Fonts/               Polices du projet (à installer sur le poste).
+  Scripts/             Scripts d'export et de mise à jour (utilisables depuis n'importe quel poste).
+  {{EXPORTS}}          PDF exportés + journal export_log.txt.
+  CHANGELOG.md         Historique des modifications.
+
+OÙ MODIFIER QUOI
+  - Une photo, un picto, une mise en page commune -> BASE (une fois pour toutes les langues), puis enregistrer :
+    les fichiers de langue la reprennent à leur prochaine ouverture.
+  - Un texte, une traduction                      -> fichier de la langue.
+  - Une donnée commune (prix…)                    -> fichier de données (projet.json > donnees), puis
+                                                     Scripts/appliquer_donnees.js.
+  - La version, une référence                     -> projet.json, puis relancer l'export.
+
+RÈGLES
+  - Insérer une image : Fichier > Insérer…, depuis Images/, avec le placement « Lié » (Fichier > Configuration du
+    document > Placement des images : Préférer lié). Jamais de copier-coller d'image (elle serait incorporée).
+  - Insérer la BASE dans un fichier de langue : décocher « Remplacer existant » dans la barre d'outils.
+  - Pas de calque pixel peint : exporter le visuel retouché dans Images/ et le placer lié.
+  - De temps en temps « Enregistrer sous » (même nom) : Affinity compacte le fichier.
+
+EXPORTER LES PDF
+  1. Ouvrir dans Affinity la BASE ou un fichier de langue (enregistré).
+  2. Fenêtre > Exécution de scripts > Bibliothèque : « Export publication » (ou ouvrir Scripts/export_publication.js
+     dans l'éditeur de script) > Exécuter. Les fichiers de langue sont ouverts, exportés puis refermés sans être
+     enregistrés.
+  3. Résultat dans {{EXPORTS}} (+ export_log.txt). La référence imprimée et le titre des PDF sont mis à jour.
+  Prérequis (une fois par poste) : Réglages > Exécution de scripts : activer l'exécution, cocher « Accéder au
+  système de fichiers », ajouter ce dossier à la liste.
+
+MONTER LA VERSION
+  1. projet.json : "version" (ou : python3 _Outils_Affinity/python/projet.py version <ce dossier> X.Y).
+  2. Noter les changements dans CHANGELOG.md.
+  3. Relancer l'export.
