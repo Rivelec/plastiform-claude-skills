@@ -1,0 +1,50 @@
+{
+ "_aide": [
+  "projet.json — projet d'éléments indépendants (fiches techniques…) : un PDF par élément et par langue.",
+  "Export : publication/export_par_element.js (bibliothèque Affinity « Export par élément »).",
+  "Versions : chaque élément a la sienne, imprimée sur l'élément (pied de page) et dans sa section du CHANGELOG.md : python/projet.py version --element, noter --element, publier --element."
+ ],
+ "projet": {
+  "nom": "{{NOM}}",
+  "type": "fiches",
+  "prefixe": "{{PREFIXE}}",
+  "annee": "{{ANNEE}}",
+  "version": "{{VERSION}}",
+  "etat": "non publiée",
+  "auteur": "Rivelec - Plastiform",
+  "langue_reference": "FR"
+ },
+ "fichiers": {
+  "base": "{{PREFIXE_FICHIERS}}_BASE.af",
+  "langues": {{LANGUES_FICHIERS}},
+  "images": "Images/",
+  "exports": "PDF/",
+  "scripts": "Scripts/"
+ },
+ "decoupage": {
+  "debut": "^(Informations Clés|Key information|Wichtige Informationen|Información clave)\\s*$",
+  "reference": "^({{PREFIXE}}_\\d{3}_\\S+)$",
+  "produit": "^{{PREFIXE}}_\\d{3}_(.+)_[A-Z]{2}$",
+  "version": "^Versi[oó]n (\\d+)\\.(\\d+)$",
+  "version_datee": "^(?:Version (?:du|of the|dated|vom|del)|Versión del|Stand vom) (\\d\\d)[\\/.](\\d\\d)[\\/.](\\d\\d)$",
+  "noms": {},
+  "page_precedente": null,
+  "titres": {
+   "FR": "Fiche technique Plastiform {produit} – Version {version}",
+   "EN": "Plastiform {produit} technical data sheet – Version {version}",
+   "DE": "Technisches Datenblatt Plastiform {produit} – Version {version}",
+   "ES": "Ficha técnica Plastiform {produit} – Versión {version}"
+  },
+  "sortie": "PDF/Fiches/{langue}/",
+  "nom_fichier": "{ref}_{version_fichier}.pdf",
+  "prereglages": ["PDF Fiches techniques web", "PDF (numérique - haute qualité)"],
+  "_aide": "debut = titre repère de la 1re page de chaque élément ; reference / version = lignes imprimées dans l'élément."
+ },
+ "verifications": {
+  "ppp_min": 150,
+  "taille_max_mo": 4,
+  "titre_contient_ref": false,
+  "interdits": []
+ },
+ "changelog": { "mode": "elements" }
+}

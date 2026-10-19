@@ -1,7 +1,7 @@
 {
   "name": "plastiform",
-  "description": "Makes Claude a Plastiform application engineer: range, accessories, Finder, application, recognition, troubleshooting — plus brand/copy skills and a writer that puts decided content into words (Gemini).",
-  "version": "0.5.0",
+  "description": "Makes Claude a Plastiform application engineer: range, accessories, Finder, application, recognition, troubleshooting — plus brand/copy skills, a writer that puts decided content into words (Gemini), and an Affinity (by Canva) publishing toolkit for Rivelec documents: multilingual layouts with a shared linked BASE, centralised data, scripted exports and versions, PDF and translation reviews.",
+  "version": "0.6.0",
   "author": {
     "name": "Plastiform (Rivelec)"
   },

@@ -9,15 +9,17 @@
     {
       "name": "plastiform",
       "source": "./plugins/plastiform",
-      "description": "Makes Claude a Plastiform application engineer — the range, accessories, product selection (Finder), application, recognition and troubleshooting — plus brand/copy skills and a writer that puts decided content into words (Gemini).",
-      "version": "0.5.0",
+      "description": "Makes Claude a Plastiform application engineer — the range, accessories, product selection (Finder), application, recognition and troubleshooting — plus brand/copy skills, a writer that puts decided content into words (Gemini), and an Affinity publishing toolkit for Rivelec documents (multilingual layouts, scripted exports, reviews).",
+      "version": "0.6.0",
       "category": "internal-tools",
       "tags": [
         "plastiform",
         "rivelec",
         "metrology",
         "engineer",
-        "finder"
+        "finder",
+        "affinity",
+        "publishing"
       ]
     }
   ]

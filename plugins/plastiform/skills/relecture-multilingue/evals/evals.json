@@ -1,0 +1,17 @@
+{
+ "skill_name": "relecture-multilingue",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Vérifie que l'allemand du catalogue respecte le lexique validé.",
+   "expected_output": "inventaire_textes FR et DE, aligner_langues.py --lexique --langue DE --proscrits :2, rapport par gravité, QCM des points à trancher.",
+   "files": []
+  },
+  {
+   "id": 2,
+   "prompt": "Le relecteur allemand m'a renvoyé ses réponses au QCM, applique-les.",
+   "expected_output": "qcm.py regles → post_DE.json, corrections_textes.js simulation puis application, textes_debordants, rendus, CHANGELOG.",
+   "files": []
+  }
+ ]
+}

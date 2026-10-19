@@ -2,8 +2,9 @@
 """Structure lint for the plastiform plugin — the CI checks Vercel/Microsoft run, scaled down.
 
 Checks: every reference file is routed from the engineer SKILL.md; frontmatter descriptions
-exist and fit budgets (hard 1024 chars, warn > 300); SKILL.md bodies < 500 lines; every
-product ref mentioned anywhere exists in products.md's master table.
+exist, are valid YAML scalars (quoted when they contain ': ') and fit budgets (hard 1024 chars,
+warn > 300); SKILL.md bodies < 500 lines; every product ref mentioned anywhere exists in
+products.md's master table.
 """
 import glob
 import os
@@ -29,7 +30,11 @@ for path in sorted(glob.glob(os.path.join(PLUGIN, "skills", "*", "SKILL.md"))):
     if not m:
         errors.append(f"{rel}: missing description")
         continue
-    n = len(m.group(1))
+    raw = m.group(1).strip()
+    quoted = len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in "\"'"
+    if not quoted and (": " in raw or " #" in raw):   # e.g. French « mot : suite » → YAML mapping error
+        errors.append(f"{rel}: unquoted description contains ': ' or ' #' (invalid YAML) — wrap it in double quotes")
+    n = len(raw[1:-1] if quoted else raw)
     if n > 1024:
         errors.append(f"{rel}: description {n} chars (max 1024)")
     elif n > 300:
