@@ -1,0 +1,41 @@
+{
+  "skill_name": "plastiform-site",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "D'après les pages produit de www.plastiform.info, donne-moi un tableau avec la dureté finale, le temps de travail et le temps de prise du F20, du F50 et du M70.",
+      "expected_output": "Tableau : F20 20 Shore A / 2 min / 6 min, F50 50 Shore A / 1 min 30 / 6 min, M70 70 Shore A / 1 min / 5 min.",
+      "files": [],
+      "assertions": [
+        "Duretés finales : 20, 50 et 70 Shore A",
+        "Temps de travail du F50 : 1 min 30",
+        "La réponse est un tableau Markdown",
+        "La méthode cite ses sources (commandes ou URL)"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Dans la FDS française en vigueur du Plastiform F30 VISUAL, que dit la rubrique 14 sur le transport, et quelle est la date de révision du document ?",
+      "expected_output": "Pas une marchandise dangereuse (terrestre, maritime, aérien) ; révision du 24.04.2026, version 3 / FR ; fichier Ed_46136.",
+      "files": [],
+      "assertions": [
+        "Date de révision : 24.04.2026",
+        "Rubrique 14 : pas une marchandise dangereuse",
+        "Cite la FDS en vigueur (Ed_46136)",
+        "Signale que la FDS couvre deux composants"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Sur www.plastiform.info, liste les questions de la FAQ de la page produit P35 en anglais, puis dis-moi si la page allemande a les mêmes questions, en donnant l'URL de la page allemande.",
+      "expected_output": "Les 10 questions anglaises, l'URL /de/produkte/pastos/p35/, et le constat que les 10 questions y sont (ordre différent, un titre en double).",
+      "files": [],
+      "assertions": [
+        "Donne l'URL allemande /de/produkte/pastos/p35/",
+        "Liste les questions anglaises (working time, polymerization time)",
+        "Relève le titre allemand en double (Aushärtezeit)",
+        "Conclut sur la comparaison des deux pages"
+      ]
+    }
+  ]
+}
