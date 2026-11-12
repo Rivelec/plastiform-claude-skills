@@ -44,6 +44,7 @@ then drag `plastiform-finder.mcpb` into Desktop → Settings → Extensions.
 | MCP   | `plastiform-finder`     | `find_product` tool → live Finder API. Ships enabled in `plugin.json`; also packs as `.mcpb` for Desktop. |
 | Agent | `plastiform-engineer`   | Whole jobs end to end: situation/plan/photo → product + kit + procedure + measurement plan. |
 | Skill | `plastiform-media`      | Read-only Piwigo client for media.plastiform.info — fuzzy FR/EN search, faceted tags, photo comparison sets. |
+| Skill | `plastiform-site`       | Reads www.plastiform.info with few tokens through the site's Markdown and JSON exports: page outline, one section or a search instead of the HTML; technical and safety data sheets in force and their text (`scripts/plf.py`, Python 3, no dependency). |
 | Skill | `plastiform-brand`      | Enforces sourcing every fact from the brand knowledge base; never invent product/offer details. |
 | Agent | `plastiform-copywriter` | Writes/reviews brand-accurate Plastiform copy, flags `[NEEDS SOURCE]` gaps. |
 | Skill | `gemini-writer`         | Puts already-decided content into words with Gemini 3.1 Pro (OpenRouter), the way a Rivelec employee writes: mail, blog article, product page, LinkedIn post. Decides neither content nor technique; checks form and flags figures not in the brief. Needs `node` ≥ 18 and an OpenRouter key (`OPENROUTER_API_KEY` or `~/.config/openrouter/key`). |
